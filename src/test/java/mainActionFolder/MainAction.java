@@ -31,13 +31,21 @@ public class MainAction {
 		TimeUnit.SECONDS.sleep(5);
 	}
 	
-	public void YoutubeSearchAction()
+	public void YoutubeSearchAction() throws InterruptedException
 	{
 		System.out.println("Youtube Search.................");
 		
-		WebElement UN = driver.findElement(By.xpath("//*[@id=\"username\"]"));
-		//UN.sendKeys(UserName);
-		System.out.println("Entered UserName");
+		WebElement SearchField = driver.findElement(By.xpath("//form//div//div//input[@id=\"search\"]"));
+		SearchField.sendKeys("Diya's best");
+		TimeUnit.SECONDS.sleep(1);
+		
+		WebElement SearchFieldButton = driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]/yt-icon"));
+		SearchFieldButton.click();
+		TimeUnit.SECONDS.sleep(8);
+		
+		WebElement SearchFieldVideo = driver.findElement(By.xpath("//div[@id=\"items\"]//ytd-video-renderer//div[@id=\"title-wrapper\"]"));
+		SearchFieldVideo.click();
+		TimeUnit.SECONDS.sleep(20);
 
 	}
 

@@ -12,6 +12,7 @@ public class MainStepDefinition {
 
 		System.out.println("Launching Browser.............");
 		MAP.LaunchBrowerAction();
+		MAP.YoutubeSearchAction();
 		MAP.QuitBrowserAction();
 
 	}
