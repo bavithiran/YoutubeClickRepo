@@ -47,9 +47,10 @@ public class MainAction {
 		
 	}
 	
-	public void YoutubeSearchAction() throws InterruptedException
+	public void YoutubeSearchAction(String SearchName) throws InterruptedException
 	{
 		System.out.println("Youtube Search.................");
+		System.out.println("Searching for"+ " = " +SearchName);
 		
 		WebElement SearchField = driver.findElement(By.xpath("//form//div//div//input[@id=\"search\"]"));
 		SearchField.sendKeys("Diya's best");
