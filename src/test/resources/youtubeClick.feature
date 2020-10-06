@@ -10,3 +10,4 @@ Feature: Project for youtube Clicks
     Examples:
     |UserName |Password  |Time|BUNAME|
     |Qa Login |Password6^|5|Chatly Prelive|
+    |Qa Login1|Chatly2020!|10|Chatly Check|
